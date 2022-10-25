@@ -1,0 +1,9 @@
+{% if lista_perguntas %}
+    <ul>
+    {% for pergunta in lista_perguntas %}
+        <li><a href="/polls/{{ pergunta.id }}/">{{ pergunta.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma pergunta cadastrada.</p>
+{% endif %}
